@@ -1,0 +1,6 @@
+framework module Pods_PKMN_Go_Find {
+  umbrella header "Pods-PKMN Go Find-umbrella.h"
+
+  export *
+  module * { export * }
+}

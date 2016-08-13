@@ -7,21 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B85DC5A81D3D9A960040ACD7 /* MaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85DC5A71D3D9A960040ACD7 /* MaterialButton.swift */; };
+		B86EB5281D496DC000ECD0E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B86EB5271D496DC000ECD0E5 /* GoogleService-Info.plist */; };
+		B86EB52C1D497C3D00ECD0E5 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86EB52B1D497C3D00ECD0E5 /* GoogleMobileAds.framework */; };
+		B878526E1D41665B00F59806 /* PokePin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B878526D1D41665B00F59806 /* PokePin.swift */; };
 		B8C842D51D36E19F00EACC48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C842D41D36E19F00EACC48 /* AppDelegate.swift */; };
-		B8C842D71D36E19F00EACC48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C842D61D36E19F00EACC48 /* ViewController.swift */; };
 		B8C842DA1D36E19F00EACC48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8C842D81D36E19F00EACC48 /* Main.storyboard */; };
 		B8C842DC1D36E19F00EACC48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8C842DB1D36E19F00EACC48 /* Assets.xcassets */; };
 		B8C842DF1D36E19F00EACC48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8C842DD1D36E19F00EACC48 /* LaunchScreen.storyboard */; };
+		B8C842E81D36E1F500EACC48 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C842E71D36E1F500EACC48 /* HomeViewController.swift */; };
+		B8C842EC1D36E3F500EACC48 /* MaterialLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C842EB1D36E3F500EACC48 /* MaterialLabel.swift */; };
+		B8C842EE1D36E41B00EACC48 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C842ED1D36E41B00EACC48 /* MaterialView.swift */; };
+		B8C842F01D36E46B00EACC48 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C842EF1D36E46B00EACC48 /* Constants.swift */; };
+		B8C842F31D36E58800EACC48 /* Moon Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B8C842F21D36E58800EACC48 /* Moon Bold.otf */; };
+		B8C842F51D36E58F00EACC48 /* Moon Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B8C842F41D36E58F00EACC48 /* Moon Light.otf */; };
+		B8C842F71D36F0C400EACC48 /* TagPokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C842F61D36F0C400EACC48 /* TagPokemonViewController.swift */; };
+		B8C842F91D36F60600EACC48 /* FindPokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C842F81D36F60600EACC48 /* FindPokemonViewController.swift */; };
+		B8C842FC1D36F80D00EACC48 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C842FB1D36F80D00EACC48 /* Pokemon.swift */; };
+		B8C842FF1D36F8DA00EACC48 /* PokemonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C842FE1D36F8DA00EACC48 /* PokemonCollectionViewCell.swift */; };
+		B8E9C9AE1D383EE700886492 /* PokeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E9C9AD1D383EE700886492 /* PokeModel.swift */; };
+		B8E9C9B01D38541A00886492 /* PokeCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E9C9AF1D38541A00886492 /* PokeCoordinate.swift */; };
+		B8E9C9B21D38623C00886492 /* FindMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E9C9B11D38623C00886492 /* FindMapViewController.swift */; };
+		E4FD8ED811002EB574D8EB0B /* Pods_PKMN_Go_Find.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D17B626905B552E94FB3DA7 /* Pods_PKMN_Go_Find.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2EE8334FAD7437586D31BB69 /* Pods-PKMN Go Find.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PKMN Go Find.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PKMN Go Find/Pods-PKMN Go Find.debug.xcconfig"; sourceTree = "<group>"; };
+		9BF7914269E96A95D84F8750 /* Pods-PKMN Go Find.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PKMN Go Find.release.xcconfig"; path = "Pods/Target Support Files/Pods-PKMN Go Find/Pods-PKMN Go Find.release.xcconfig"; sourceTree = "<group>"; };
+		9D17B626905B552E94FB3DA7 /* Pods_PKMN_Go_Find.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PKMN_Go_Find.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B85DC5A71D3D9A960040ACD7 /* MaterialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialButton.swift; sourceTree = "<group>"; };
+		B86EB5271D496DC000ECD0E5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B86EB52B1D497C3D00ECD0E5 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		B878526D1D41665B00F59806 /* PokePin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokePin.swift; sourceTree = "<group>"; };
 		B8C842D11D36E19F00EACC48 /* PKMN Go Find.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PKMN Go Find.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8C842D41D36E19F00EACC48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B8C842D61D36E19F00EACC48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B8C842D91D36E19F00EACC48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B8C842DB1D36E19F00EACC48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8C842DE1D36E19F00EACC48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8C842E01D36E19F00EACC48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8C842E71D36E1F500EACC48 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B8C842EB1D36E3F500EACC48 /* MaterialLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialLabel.swift; sourceTree = "<group>"; };
+		B8C842ED1D36E41B00EACC48 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		B8C842EF1D36E46B00EACC48 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B8C842F21D36E58800EACC48 /* Moon Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Moon Bold.otf"; sourceTree = "<group>"; };
+		B8C842F41D36E58F00EACC48 /* Moon Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Moon Light.otf"; sourceTree = "<group>"; };
+		B8C842F61D36F0C400EACC48 /* TagPokemonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagPokemonViewController.swift; sourceTree = "<group>"; };
+		B8C842F81D36F60600EACC48 /* FindPokemonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindPokemonViewController.swift; sourceTree = "<group>"; };
+		B8C842FB1D36F80D00EACC48 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		B8C842FE1D36F8DA00EACC48 /* PokemonCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonCollectionViewCell.swift; sourceTree = "<group>"; };
+		B8E9C9AD1D383EE700886492 /* PokeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeModel.swift; sourceTree = "<group>"; };
+		B8E9C9AF1D38541A00886492 /* PokeCoordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeCoordinate.swift; sourceTree = "<group>"; };
+		B8E9C9B11D38623C00886492 /* FindMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindMapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +65,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B86EB52C1D497C3D00ECD0E5 /* GoogleMobileAds.framework in Frameworks */,
+				E4FD8ED811002EB574D8EB0B /* Pods_PKMN_Go_Find.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		590FC670A0EF1ABE1E61FD6E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9D17B626905B552E94FB3DA7 /* Pods_PKMN_Go_Find.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B8C842C81D36E19F00EACC48 = {
 			isa = PBXGroup;
 			children = (
+				B86EB52B1D497C3D00ECD0E5 /* GoogleMobileAds.framework */,
 				B8C842D31D36E19F00EACC48 /* PKMN Go Find */,
 				B8C842D21D36E19F00EACC48 /* Products */,
+				EF172C146D5EF4F9AF53C23A /* Pods */,
+				590FC670A0EF1ABE1E61FD6E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +103,94 @@
 		B8C842D31D36E19F00EACC48 /* PKMN Go Find */ = {
 			isa = PBXGroup;
 			children = (
-				B8C842D41D36E19F00EACC48 /* AppDelegate.swift */,
-				B8C842D61D36E19F00EACC48 /* ViewController.swift */,
+				B8E9C9AC1D383ECD00886492 /* Models */,
 				B8C842D81D36E19F00EACC48 /* Main.storyboard */,
-				B8C842DB1D36E19F00EACC48 /* Assets.xcassets */,
 				B8C842DD1D36E19F00EACC48 /* LaunchScreen.storyboard */,
-				B8C842E01D36E19F00EACC48 /* Info.plist */,
+				B8C842FD1D36F8BD00EACC48 /* Cells */,
+				B8C842FA1D36F7FD00EACC48 /* Custom Classes */,
+				B8C842EA1D36E3DA00EACC48 /* Views */,
+				B8C842E91D36E1FE00EACC48 /* View Controllers */,
+				B8C842E61D36E1AB00EACC48 /* SF */,
+				B8C842F11D36E56000EACC48 /* Fonts */,
 			);
 			path = "PKMN Go Find";
+			sourceTree = "<group>";
+		};
+		B8C842E61D36E1AB00EACC48 /* SF */ = {
+			isa = PBXGroup;
+			children = (
+				B86EB5271D496DC000ECD0E5 /* GoogleService-Info.plist */,
+				B8C842EF1D36E46B00EACC48 /* Constants.swift */,
+				B8C842D41D36E19F00EACC48 /* AppDelegate.swift */,
+				B8C842DB1D36E19F00EACC48 /* Assets.xcassets */,
+				B8C842E01D36E19F00EACC48 /* Info.plist */,
+			);
+			name = SF;
+			sourceTree = "<group>";
+		};
+		B8C842E91D36E1FE00EACC48 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B8C842E71D36E1F500EACC48 /* HomeViewController.swift */,
+				B8C842F61D36F0C400EACC48 /* TagPokemonViewController.swift */,
+				B8C842F81D36F60600EACC48 /* FindPokemonViewController.swift */,
+				B8E9C9B11D38623C00886492 /* FindMapViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		B8C842EA1D36E3DA00EACC48 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B8C842EB1D36E3F500EACC48 /* MaterialLabel.swift */,
+				B8C842ED1D36E41B00EACC48 /* MaterialView.swift */,
+				B85DC5A71D3D9A960040ACD7 /* MaterialButton.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		B8C842F11D36E56000EACC48 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B8C842F21D36E58800EACC48 /* Moon Bold.otf */,
+				B8C842F41D36E58F00EACC48 /* Moon Light.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		B8C842FA1D36F7FD00EACC48 /* Custom Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B8C842FB1D36F80D00EACC48 /* Pokemon.swift */,
+				B8E9C9AF1D38541A00886492 /* PokeCoordinate.swift */,
+			);
+			name = "Custom Classes";
+			sourceTree = "<group>";
+		};
+		B8C842FD1D36F8BD00EACC48 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B8C842FE1D36F8DA00EACC48 /* PokemonCollectionViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		B8E9C9AC1D383ECD00886492 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B8E9C9AD1D383EE700886492 /* PokeModel.swift */,
+				B878526D1D41665B00F59806 /* PokePin.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		EF172C146D5EF4F9AF53C23A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2EE8334FAD7437586D31BB69 /* Pods-PKMN Go Find.debug.xcconfig */,
+				9BF7914269E96A95D84F8750 /* Pods-PKMN Go Find.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +200,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B8C842E31D36E19F00EACC48 /* Build configuration list for PBXNativeTarget "PKMN Go Find" */;
 			buildPhases = (
+				CC381D56B49CE9E6E30D036A /* 📦 Check Pods Manifest.lock */,
 				B8C842CD1D36E19F00EACC48 /* Sources */,
 				B8C842CE1D36E19F00EACC48 /* Frameworks */,
 				B8C842CF1D36E19F00EACC48 /* Resources */,
+				B157960DF90DF08F292A6121 /* 📦 Embed Pods Frameworks */,
+				C2ECF22FD0D0246EFDCC44D5 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +228,7 @@
 				TargetAttributes = {
 					B8C842D01D36E19F00EACC48 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 4A7ME9SHBZ;
 					};
 				};
 			};
@@ -124,19 +257,82 @@
 			files = (
 				B8C842DF1D36E19F00EACC48 /* LaunchScreen.storyboard in Resources */,
 				B8C842DC1D36E19F00EACC48 /* Assets.xcassets in Resources */,
+				B8C842F51D36E58F00EACC48 /* Moon Light.otf in Resources */,
+				B8C842F31D36E58800EACC48 /* Moon Bold.otf in Resources */,
 				B8C842DA1D36E19F00EACC48 /* Main.storyboard in Resources */,
+				B86EB5281D496DC000ECD0E5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B157960DF90DF08F292A6121 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PKMN Go Find/Pods-PKMN Go Find-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2ECF22FD0D0246EFDCC44D5 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PKMN Go Find/Pods-PKMN Go Find-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC381D56B49CE9E6E30D036A /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B8C842CD1D36E19F00EACC48 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8C842D71D36E19F00EACC48 /* ViewController.swift in Sources */,
+				B8C842F91D36F60600EACC48 /* FindPokemonViewController.swift in Sources */,
+				B85DC5A81D3D9A960040ACD7 /* MaterialButton.swift in Sources */,
+				B8C842FF1D36F8DA00EACC48 /* PokemonCollectionViewCell.swift in Sources */,
+				B8C842FC1D36F80D00EACC48 /* Pokemon.swift in Sources */,
+				B8E9C9AE1D383EE700886492 /* PokeModel.swift in Sources */,
+				B8C842F01D36E46B00EACC48 /* Constants.swift in Sources */,
+				B8E9C9B21D38623C00886492 /* FindMapViewController.swift in Sources */,
+				B8E9C9B01D38541A00886492 /* PokeCoordinate.swift in Sources */,
+				B878526E1D41665B00F59806 /* PokePin.swift in Sources */,
+				B8C842EC1D36E3F500EACC48 /* MaterialLabel.swift in Sources */,
 				B8C842D51D36E19F00EACC48 /* AppDelegate.swift in Sources */,
+				B8C842F71D36F0C400EACC48 /* TagPokemonViewController.swift in Sources */,
+				B8C842E81D36E1F500EACC48 /* HomeViewController.swift in Sources */,
+				B8C842EE1D36E41B00EACC48 /* MaterialView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,23 +445,45 @@
 		};
 		B8C842E41D36E19F00EACC48 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EE8334FAD7437586D31BB69 /* Pods-PKMN Go Find.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PKMN",
+					Go,
+					Find,
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "PKMN Go Find/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Shayne-Torres.PKMN-Go-Find";
+				PRODUCT_BUNDLE_IDENTIFIER = "First-Post.PokeTrails";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		B8C842E51D36E19F00EACC48 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BF7914269E96A95D84F8750 /* Pods-PKMN Go Find.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PKMN",
+					Go,
+					Find,
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "PKMN Go Find/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Shayne-Torres.PKMN-Go-Find";
+				PRODUCT_BUNDLE_IDENTIFIER = "First-Post.PokeTrails";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -288,6 +506,7 @@
 				B8C842E51D36E19F00EACC48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

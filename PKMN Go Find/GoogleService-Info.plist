@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>APP_ID</key>
+	<string>ca-app-pub-3117377679268476~7444409295</string>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>174073732720-isb080c7nu5c585c6t78lsph5o3dh5uo.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.174073732720-isb080c7nu5c585c6t78lsph5o3dh5uo</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCqb83FU6IFWnmkCYP_dLDoKU5S5DFeFiE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>174073732720</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>First-Post.PokeTrails</string>
+	<key>PROJECT_ID</key>
+	<string>poke-trails</string>
+	<key>STORAGE_BUCKET</key>
+	<string>poke-trails.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:174073732720:ios:572de4943e777c4e</string>
+	<key>DATABASE_URL</key>
+	<string>https://poke-trails.firebaseio.com</string>
+</dict>
+</plist>

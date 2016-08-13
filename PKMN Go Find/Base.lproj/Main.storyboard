@@ -1,13 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Moon Light.otf">
+            <string>Moon-Light</string>
+            <string>Moon-Light</string>
+            <string>Moon-Light</string>
+            <string>Moon-Light</string>
+            <string>Moon-Light</string>
+            <string>Moon-Light</string>
+            <string>Moon-Light</string>
+            <string>Moon-Light</string>
+            <string>Moon-Light</string>
+            <string>Moon-Light</string>
+            <string>Moon-Light</string>
+            <string>Moon-Light</string>
+            <string>Moon-Light</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="PKMN_Go_Find" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +34,638 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="UZK-8g-9b1">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9T-V8-Vvf">
+                                <rect key="frame" x="229" y="186" width="142" height="142"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="142" id="gZW-wv-8Pw"/>
+                                    <constraint firstAttribute="height" constant="142" id="mFy-6D-x9y"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="button_find"/>
+                                <connections>
+                                    <action selector="findPoke:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j66-u2-7bI"/>
+                                    <segue destination="9DI-Y9-cem" kind="show" id="toU-w7-LXL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7e2-Jx-7wi">
+                                <rect key="frame" x="229" y="362" width="142" height="142"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="142" id="KSl-d8-JUz"/>
+                                    <constraint firstAttribute="width" constant="142" id="MrV-7X-YXB"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="button_Tag"/>
+                                <connections>
+                                    <action selector="tagPoke:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DVg-sS-Q1m"/>
+                                    <segue destination="QGR-1G-rVc" kind="show" id="ak2-x0-IrY"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RK9-3z-etz" customClass="GADBannerView">
+                                <rect key="frame" x="140" y="550" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="Cp0-bM-sey"/>
+                                    <constraint firstAttribute="height" constant="50" id="twW-PH-DVj"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="fq1-yk-1oa">
+                                <rect key="frame" x="20" y="20" width="560" height="158"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="N8H-ai-7PF"/>
+                                    <constraint firstAttribute="height" constant="158" id="ZXs-Ec-Iqf"/>
+                                    <constraint firstAttribute="width" constant="560" id="a3q-iJ-z03"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="N8H-ai-7PF"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UZK-8g-9b1" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="1BU-EQ-jaN"/>
+                            <constraint firstItem="fq1-yk-1oa" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="1IW-bs-9Ab"/>
+                            <constraint firstItem="e9T-V8-Vvf" firstAttribute="centerX" secondItem="fq1-yk-1oa" secondAttribute="centerX" id="IeD-pS-P9J"/>
+                            <constraint firstItem="UZK-8g-9b1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ROd-3L-7WH"/>
+                            <constraint firstItem="RK9-3z-etz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TXS-pR-9Cl"/>
+                            <constraint firstItem="e9T-V8-Vvf" firstAttribute="top" secondItem="fq1-yk-1oa" secondAttribute="bottom" constant="8" id="ZZX-id-JPD"/>
+                            <constraint firstItem="fq1-yk-1oa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Zhw-9p-nOQ"/>
+                            <constraint firstItem="7e2-Jx-7wi" firstAttribute="top" secondItem="e9T-V8-Vvf" secondAttribute="bottom" constant="34" id="ag5-Qk-a1e"/>
+                            <constraint firstItem="UZK-8g-9b1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bmR-BZ-7gF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RK9-3z-etz" secondAttribute="bottom" id="icd-JG-yzA"/>
+                            <constraint firstAttribute="trailing" secondItem="UZK-8g-9b1" secondAttribute="trailing" id="u4o-uK-CQJ"/>
+                            <constraint firstItem="fq1-yk-1oa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="vik-zo-Gou"/>
+                            <constraint firstItem="7e2-Jx-7wi" firstAttribute="centerX" secondItem="e9T-V8-Vvf" secondAttribute="centerX" id="zr8-TE-oyZ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bannerView" destination="RK9-3z-etz" id="jZJ-Rw-coQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="498" y="339"/>
+        </scene>
+        <!--Find Pokemon View Controller-->
+        <scene sceneID="2kt-9E-km2">
+            <objects>
+                <viewController id="9DI-Y9-cem" customClass="FindPokemonViewController" customModule="PKMN_Go_Find" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CH0-Ub-lrI"/>
+                        <viewControllerLayoutGuide type="bottom" id="l80-y7-k3b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NOX-UD-8O0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="QKp-4D-y9Z">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LXT-5g-bss">
+                                <rect key="frame" x="20" y="72" width="560" height="528"/>
+                                <color key="backgroundColor" red="0.10588235294117647" green="0.43137254901960786" blue="0.62352941176470589" alpha="0.0" colorSpace="deviceRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Lfd-7R-ano">
+                                    <size key="itemSize" width="224" height="118"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pokemonCell" id="j3k-yq-zbQ" customClass="PokemonCollectionViewCell" customModule="PKMN_Go_Find" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="224" height="118"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="224" height="118"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y0l-vL-gfM">
+                                                    <rect key="frame" x="-0.5" y="0.0" width="224" height="91"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pkball" translatesAutoresizingMaskIntoConstraints="NO" id="U91-HJ-4tN">
+                                                    <rect key="frame" x="0.0" y="0.0" width="224" height="91"/>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4r5-Q8-4h4">
+                                                    <rect key="frame" x="0.0" y="90" width="224" height="28"/>
+                                                    <color key="backgroundColor" red="0.92549026010000002" green="0.20392158630000001" blue="0.2196078598" alpha="1" colorSpace="deviceRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="28" id="Nuc-ec-cu2"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfC-ZA-xdV">
+                                                    <rect key="frame" x="8" y="99" width="35" height="15"/>
+                                                    <color key="backgroundColor" red="0.92549026010000002" green="0.20392158630000001" blue="0.2196078598" alpha="1" colorSpace="deviceRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="15" id="x4F-Dj-SEu"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Moon-Light" family="Moon" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6RP-D2-lKt">
+                                                    <rect key="frame" x="194" y="99" width="22" height="15"/>
+                                                    <color key="backgroundColor" red="0.92549026010000002" green="0.20392158630000001" blue="0.2196078598" alpha="1" colorSpace="deviceRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="15" id="ceE-dW-aFK"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Moon-Light" family="Moon" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.92549026010000002" green="0.20392158630000001" blue="0.2196078598" alpha="1" colorSpace="deviceRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="U91-HJ-4tN" firstAttribute="trailing" secondItem="4r5-Q8-4h4" secondAttribute="trailing" id="5NT-rd-R5X"/>
+                                            <constraint firstItem="6RP-D2-lKt" firstAttribute="top" secondItem="y0l-vL-gfM" secondAttribute="bottom" constant="8" id="65Q-p1-hWU"/>
+                                            <constraint firstAttribute="trailing" secondItem="4r5-Q8-4h4" secondAttribute="trailing" id="71N-tm-zSq"/>
+                                            <constraint firstAttribute="bottom" secondItem="6RP-D2-lKt" secondAttribute="bottom" constant="4" id="FwU-Kh-8Yc"/>
+                                            <constraint firstAttribute="bottom" secondItem="4r5-Q8-4h4" secondAttribute="bottom" id="Ssm-hL-Muv"/>
+                                            <constraint firstItem="4r5-Q8-4h4" firstAttribute="leading" secondItem="j3k-yq-zbQ" secondAttribute="leading" id="TAW-DW-4Xe"/>
+                                            <constraint firstItem="y0l-vL-gfM" firstAttribute="leading" secondItem="j3k-yq-zbQ" secondAttribute="leading" id="ejl-It-ebK"/>
+                                            <constraint firstItem="U91-HJ-4tN" firstAttribute="leading" secondItem="4r5-Q8-4h4" secondAttribute="leading" id="f72-DV-Ide"/>
+                                            <constraint firstItem="y0l-vL-gfM" firstAttribute="top" secondItem="j3k-yq-zbQ" secondAttribute="top" id="kvf-aN-b8e"/>
+                                            <constraint firstAttribute="bottom" secondItem="qfC-ZA-xdV" secondAttribute="bottom" constant="4" id="r6E-Dj-NQc"/>
+                                            <constraint firstItem="U91-HJ-4tN" firstAttribute="top" secondItem="j3k-yq-zbQ" secondAttribute="top" id="sCy-fy-MKm"/>
+                                            <constraint firstAttribute="trailing" secondItem="6RP-D2-lKt" secondAttribute="trailing" constant="8" id="vRC-VJ-M7S"/>
+                                            <constraint firstAttribute="trailing" secondItem="y0l-vL-gfM" secondAttribute="trailing" id="w4D-S3-Hie"/>
+                                            <constraint firstItem="qfC-ZA-xdV" firstAttribute="top" secondItem="U91-HJ-4tN" secondAttribute="bottom" constant="8" symbolic="YES" id="zJL-e9-WDq"/>
+                                            <constraint firstItem="qfC-ZA-xdV" firstAttribute="leading" secondItem="j3k-yq-zbQ" secondAttribute="leading" constant="8" id="zQW-GV-oQd"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="pokeImage" destination="U91-HJ-4tN" id="O3x-t9-fRL"/>
+                                            <outlet property="pokeNO" destination="6RP-D2-lKt" id="zBb-Mb-8MA"/>
+                                            <outlet property="pokeName" destination="qfC-ZA-xdV" id="9AV-GR-M1U"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Gf-iq-TDe">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="72"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" placeholder="Pokemon Name or Number" translatesAutoresizingMaskIntoConstraints="NO" id="9kr-fU-cdT">
+                                        <rect key="frame" x="71" y="14" width="529" height="44"/>
+                                        <color key="barTintColor" red="0.99607843139999996" green="0.80392156859999997" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                        <scopeButtonTitles>
+                                            <string>Title</string>
+                                            <string>Title</string>
+                                        </scopeButtonTitles>
+                                    </searchBar>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6NI-fX-ARa" customClass="MaterialButton" customModule="PKMN_Go_Find" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="14" width="63" height="44"/>
+                                        <color key="backgroundColor" red="0.73333333333333328" green="0.58823529411764708" blue="0.0039215686274509803" alpha="1" colorSpace="deviceRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="4Bj-rA-u53"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Moon-Light" family="Moon" pointSize="24"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="L3h-pR-rDs" kind="unwind" unwindAction="backToHome:" id="zlk-Mw-NgV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.80392156859999997" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="9kr-fU-cdT" firstAttribute="leading" secondItem="6NI-fX-ARa" secondAttribute="trailing" id="0fe-Ug-qKn"/>
+                                    <constraint firstItem="9kr-fU-cdT" firstAttribute="top" secondItem="3Gf-iq-TDe" secondAttribute="top" constant="14" id="Ml8-jw-vLT"/>
+                                    <constraint firstItem="6NI-fX-ARa" firstAttribute="top" secondItem="3Gf-iq-TDe" secondAttribute="top" constant="14" id="Oey-F0-Bsp"/>
+                                    <constraint firstAttribute="height" constant="72" id="PlK-6g-Hst"/>
+                                    <constraint firstItem="6NI-fX-ARa" firstAttribute="leading" secondItem="3Gf-iq-TDe" secondAttribute="leading" constant="8" id="SIg-Tf-ng1"/>
+                                    <constraint firstAttribute="trailing" secondItem="9kr-fU-cdT" secondAttribute="trailing" id="oPs-x8-AyJ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.10588235294117647" green="0.43137254901960786" blue="0.62352941176470589" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="LXT-5g-bss" firstAttribute="top" secondItem="3Gf-iq-TDe" secondAttribute="bottom" id="61r-wA-i89"/>
+                            <constraint firstItem="QKp-4D-y9Z" firstAttribute="leading" secondItem="NOX-UD-8O0" secondAttribute="leading" id="KdO-jV-w2e"/>
+                            <constraint firstItem="QKp-4D-y9Z" firstAttribute="top" secondItem="NOX-UD-8O0" secondAttribute="top" id="MgH-Bq-DfV"/>
+                            <constraint firstItem="3Gf-iq-TDe" firstAttribute="top" secondItem="NOX-UD-8O0" secondAttribute="top" id="RDC-9P-VTb"/>
+                            <constraint firstAttribute="trailing" secondItem="3Gf-iq-TDe" secondAttribute="trailing" id="SXZ-zk-dpf"/>
+                            <constraint firstItem="l80-y7-k3b" firstAttribute="top" secondItem="LXT-5g-bss" secondAttribute="bottom" id="XBY-RQ-Uho"/>
+                            <constraint firstItem="LXT-5g-bss" firstAttribute="trailing" secondItem="NOX-UD-8O0" secondAttribute="trailingMargin" id="Zlz-3k-C1B"/>
+                            <constraint firstItem="3Gf-iq-TDe" firstAttribute="leading" secondItem="NOX-UD-8O0" secondAttribute="leading" id="g1W-1N-l8H"/>
+                            <constraint firstItem="LXT-5g-bss" firstAttribute="leading" secondItem="NOX-UD-8O0" secondAttribute="leadingMargin" id="mua-NT-TII"/>
+                            <constraint firstItem="l80-y7-k3b" firstAttribute="top" secondItem="QKp-4D-y9Z" secondAttribute="bottom" id="whQ-yE-c1p"/>
+                            <constraint firstAttribute="trailing" secondItem="QKp-4D-y9Z" secondAttribute="trailing" id="yTv-ic-wBu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cView" destination="LXT-5g-bss" id="KVQ-5w-0aF"/>
+                        <outlet property="pokeSearchBar" destination="9kr-fU-cdT" id="lGu-PJ-aIf"/>
+                        <segue destination="QGR-1G-rVc" kind="show" identifier="selectToFind" id="MVG-fn-iKc"/>
+                        <segue destination="L3h-pR-rDs" kind="unwind" identifier="backToHome" unwindAction="backToHome:" id="hWd-ii-DTT"/>
+                        <segue destination="L3h-pR-rDs" kind="unwind" identifier="backToTag" unwindAction="backToTag:" id="LTY-CJ-pC1"/>
+                        <segue destination="Ai9-wO-53S" kind="show" identifier="findPoke" id="giw-8b-t8t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U7c-4T-Qwj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="L3h-pR-rDs" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1254" y="339"/>
+        </scene>
+        <!--Tag Pokemon View Controller-->
+        <scene sceneID="Ubj-Rx-xnj">
+            <objects>
+                <viewController id="QGR-1G-rVc" customClass="TagPokemonViewController" customModule="PKMN_Go_Find" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bIJ-Nn-OQT"/>
+                        <viewControllerLayoutGuide type="bottom" id="DUJ-EC-l2Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f8e-ig-9je">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iwd-OX-EGp">
+                                <rect key="frame" x="0.0" y="143" width="600" height="457"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vSP-FN-4A5" customClass="GADBannerView">
+                                <rect key="frame" x="140" y="550" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Rfl-AP-Vsy"/>
+                                    <constraint firstAttribute="width" constant="320" id="vvf-zC-NOc"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kC3-dT-b1C">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="72"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pN3-uN-cfy" customClass="MaterialButton" customModule="PKMN_Go_Find" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="14" width="63" height="44"/>
+                                        <color key="backgroundColor" red="0.73333333329999995" green="0.58823529409999997" blue="0.0039215686269999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="63" id="vVY-OM-acb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Moon-Light" family="Moon" pointSize="24"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="3F1-l3-SFN" kind="unwind" unwindAction="backToHome:" id="mJF-3J-Lgt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.80392156859999997" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="pN3-uN-cfy" firstAttribute="top" secondItem="kC3-dT-b1C" secondAttribute="top" constant="14" id="9Hv-ZC-hoT"/>
+                                    <constraint firstAttribute="bottom" secondItem="pN3-uN-cfy" secondAttribute="bottom" constant="14" id="EpD-NV-pUq"/>
+                                    <constraint firstItem="pN3-uN-cfy" firstAttribute="leading" secondItem="kC3-dT-b1C" secondAttribute="leading" constant="8" id="Z1G-K9-dMk"/>
+                                    <constraint firstAttribute="height" constant="72" id="ifp-e0-zBv"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FMk-Dq-DUg">
+                                <rect key="frame" x="0.0" y="71" width="600" height="72"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pkball" translatesAutoresizingMaskIntoConstraints="NO" id="bk5-CD-Bc9">
+                                        <rect key="frame" x="8" y="2" width="80" height="67"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="O7W-NB-pkk"/>
+                                            <constraint firstAttribute="height" constant="67" id="qb8-DL-E2t"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbL-hi-4Wd" customClass="MaterialLabel" customModule="PKMN_Go_Find" customModuleProvider="target">
+                                        <rect key="frame" x="96" y="8" width="72" height="26.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="26.5" id="cnQ-p2-K8M"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Moon-Light" family="Moon" pointSize="25"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAz-Uw-6Ij" customClass="MaterialLabel" customModule="PKMN_Go_Find" customModuleProvider="target">
+                                        <rect key="frame" x="96" y="50" width="26" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="26" id="r7Z-bV-Ez2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Moon-Light" family="Moon" pointSize="16"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="VfZ-jj-h2j" customClass="MaterialButton" customModule="PKMN_Go_Find" customModuleProvider="target">
+                                        <rect key="frame" x="543" y="11" width="49" height="49"/>
+                                        <color key="backgroundColor" red="0.20392156859999999" green="0.92549019610000005" blue="0.40000000000000002" alpha="1" colorSpace="deviceRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="49" id="aOJ-Io-edE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Moon-Light" family="Moon" pointSize="14"/>
+                                        <state key="normal" title="Edit">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="9DI-Y9-cem" kind="show" id="p4f-Bf-5W9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="qbL-hi-4Wd" firstAttribute="leading" secondItem="bk5-CD-Bc9" secondAttribute="trailing" constant="8" id="2QH-pU-mnp"/>
+                                    <constraint firstItem="VfZ-jj-h2j" firstAttribute="top" secondItem="FMk-Dq-DUg" secondAttribute="top" constant="11" id="EW4-Aq-jKY"/>
+                                    <constraint firstItem="bk5-CD-Bc9" firstAttribute="top" secondItem="FMk-Dq-DUg" secondAttribute="top" constant="2" id="XEH-Xa-0mx"/>
+                                    <constraint firstAttribute="height" constant="72" id="YPj-y7-bUg"/>
+                                    <constraint firstItem="bk5-CD-Bc9" firstAttribute="leading" secondItem="FMk-Dq-DUg" secondAttribute="leading" constant="8" id="bUD-zH-fUb"/>
+                                    <constraint firstAttribute="trailing" secondItem="VfZ-jj-h2j" secondAttribute="trailing" constant="8" id="hY1-zW-GIM"/>
+                                    <constraint firstAttribute="bottom" secondItem="VfZ-jj-h2j" secondAttribute="bottom" constant="12" id="kM3-Dq-MvZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="AAz-Uw-6Ij" secondAttribute="bottom" constant="5" id="mfa-PU-QNj"/>
+                                    <constraint firstItem="AAz-Uw-6Ij" firstAttribute="leading" secondItem="bk5-CD-Bc9" secondAttribute="trailing" constant="8" id="qe8-Rb-EqU"/>
+                                    <constraint firstItem="qbL-hi-4Wd" firstAttribute="top" secondItem="FMk-Dq-DUg" secondAttribute="top" constant="8" id="uNy-BP-egh"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NjC-k3-a1W" customClass="MaterialButton" customModule="PKMN_Go_Find" customModuleProvider="target">
+                                <rect key="frame" x="260" y="462" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="3a0-kL-eBW"/>
+                                    <constraint firstAttribute="height" constant="80" id="sLk-vO-Of2"/>
+                                </constraints>
+                                <state key="normal" image="button_findpin"/>
+                                <connections>
+                                    <action selector="tagPokemon:" destination="QGR-1G-rVc" eventType="touchUpInside" id="UWr-gv-APo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.10588235294117647" green="0.43137254901960786" blue="0.62352941176470589" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="NjC-k3-a1W" firstAttribute="centerX" secondItem="iwd-OX-EGp" secondAttribute="centerX" id="8bx-ry-sdz"/>
+                            <constraint firstItem="DUJ-EC-l2Q" firstAttribute="top" secondItem="iwd-OX-EGp" secondAttribute="bottom" id="AzI-vZ-BYn"/>
+                            <constraint firstItem="vSP-FN-4A5" firstAttribute="top" secondItem="NjC-k3-a1W" secondAttribute="bottom" constant="8" id="JfD-be-1ko"/>
+                            <constraint firstItem="kC3-dT-b1C" firstAttribute="top" secondItem="f8e-ig-9je" secondAttribute="top" id="LIr-r7-rdD"/>
+                            <constraint firstItem="vSP-FN-4A5" firstAttribute="top" secondItem="iwd-OX-EGp" secondAttribute="bottom" constant="-50" id="SFu-i2-wpy"/>
+                            <constraint firstItem="iwd-OX-EGp" firstAttribute="top" secondItem="FMk-Dq-DUg" secondAttribute="bottom" id="bag-hK-gMI"/>
+                            <constraint firstItem="kC3-dT-b1C" firstAttribute="leading" secondItem="f8e-ig-9je" secondAttribute="leading" id="fPz-OV-x2r"/>
+                            <constraint firstItem="FMk-Dq-DUg" firstAttribute="top" secondItem="kC3-dT-b1C" secondAttribute="bottom" constant="-1" id="gIh-B2-cQD"/>
+                            <constraint firstAttribute="trailing" secondItem="iwd-OX-EGp" secondAttribute="trailing" id="lhY-sS-e3p"/>
+                            <constraint firstItem="vSP-FN-4A5" firstAttribute="centerX" secondItem="iwd-OX-EGp" secondAttribute="centerX" id="m3s-cG-i7m"/>
+                            <constraint firstItem="iwd-OX-EGp" firstAttribute="leading" secondItem="f8e-ig-9je" secondAttribute="leading" id="okE-oq-n9y"/>
+                            <constraint firstAttribute="trailing" secondItem="kC3-dT-b1C" secondAttribute="trailing" id="t3T-gy-bBs"/>
+                            <constraint firstItem="FMk-Dq-DUg" firstAttribute="leading" secondItem="f8e-ig-9je" secondAttribute="leadingMargin" constant="-20" id="yvh-dp-4mC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FMk-Dq-DUg" secondAttribute="trailing" constant="-20" id="zPZ-7b-MS5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bannerView" destination="vSP-FN-4A5" id="pRe-0M-1rN"/>
+                        <outlet property="pokeImage" destination="bk5-CD-Bc9" id="Oga-LK-ANR"/>
+                        <outlet property="pokeName" destination="qbL-hi-4Wd" id="IvH-cX-xsE"/>
+                        <outlet property="pokeNumber" destination="AAz-Uw-6Ij" id="dls-Tw-76q"/>
+                        <outlet property="pokeTagMap" destination="iwd-OX-EGp" id="XyK-Cg-K4J"/>
+                        <outlet property="tagPokeButton" destination="NjC-k3-a1W" id="b3K-qV-3q6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jDM-lz-Fov" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="3F1-l3-SFN" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1108" y="1113"/>
+        </scene>
+        <!--Find Map View Controller-->
+        <scene sceneID="u4B-4c-65L">
+            <objects>
+                <viewController id="Ai9-wO-53S" customClass="FindMapViewController" customModule="PKMN_Go_Find" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qTP-uv-6FY"/>
+                        <viewControllerLayoutGuide type="bottom" id="4aw-Tl-95z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sWN-FF-AHT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3jA-Gh-xjT" customClass="MaterialView" customModule="PKMN_Go_Find" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="600" height="72"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kc9-IN-lta" customClass="MaterialLabel" customModule="PKMN_Go_Find" customModuleProvider="target">
+                                        <rect key="frame" x="131" y="7" width="426" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="eze-3G-lV6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Moon-Light" family="Moon" pointSize="25"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pkball" translatesAutoresizingMaskIntoConstraints="NO" id="r5p-2y-G8r">
+                                        <rect key="frame" x="43" y="4" width="80" height="67"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="EB8-Mh-BL9"/>
+                                            <constraint firstAttribute="height" constant="67" id="J7c-1u-csd"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7N-C2-5NL">
+                                        <rect key="frame" x="565" y="7" width="27" height="57"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="27" id="qQs-Ze-3sf"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="rightarrow"/>
+                                        <connections>
+                                            <action selector="rightArrowtapped:" destination="Ai9-wO-53S" eventType="touchUpInside" id="e8n-5F-9jw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWZ-vY-1ev">
+                                        <rect key="frame" x="8" y="8" width="27" height="59"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="27" id="36l-ow-BNR"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="leftarrow"/>
+                                        <connections>
+                                            <action selector="leftArrowTapped:" destination="Ai9-wO-53S" eventType="touchUpInside" id="6kD-NG-DLH"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8JU-Vp-aeE" customClass="MaterialLabel" customModule="PKMN_Go_Find" customModuleProvider="target">
+                                        <rect key="frame" x="131" y="41" width="26" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="26" id="u3i-iE-MSg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Moon-Light" family="Moon" pointSize="16"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="02y-BN-quu"/>
+                                    <constraint firstAttribute="bottom" secondItem="n7N-C2-5NL" secondAttribute="bottom" constant="8.5" id="3FT-6g-1gR"/>
+                                    <constraint firstItem="8JU-Vp-aeE" firstAttribute="leading" secondItem="r5p-2y-G8r" secondAttribute="trailing" constant="8" id="HaZ-sH-Ktw"/>
+                                    <constraint firstItem="n7N-C2-5NL" firstAttribute="top" secondItem="3jA-Gh-xjT" secondAttribute="top" constant="7" id="KtJ-s7-aeT"/>
+                                    <constraint firstItem="kc9-IN-lta" firstAttribute="leading" secondItem="r5p-2y-G8r" secondAttribute="trailing" constant="8" id="LX3-gn-aTt"/>
+                                    <constraint firstItem="n7N-C2-5NL" firstAttribute="leading" secondItem="kc9-IN-lta" secondAttribute="trailing" constant="8" id="QAv-M0-DCm"/>
+                                    <constraint firstAttribute="bottom" secondItem="fWZ-vY-1ev" secondAttribute="bottom" constant="5" id="Wk4-ir-ncU"/>
+                                    <constraint firstAttribute="bottom" secondItem="8JU-Vp-aeE" secondAttribute="bottom" constant="5" id="Ydk-II-Msy"/>
+                                    <constraint firstItem="r5p-2y-G8r" firstAttribute="leading" secondItem="fWZ-vY-1ev" secondAttribute="trailing" constant="8" id="eHF-yA-sG2"/>
+                                    <constraint firstAttribute="trailing" secondItem="n7N-C2-5NL" secondAttribute="trailing" constant="8" id="hzn-Wg-fIF"/>
+                                    <constraint firstItem="r5p-2y-G8r" firstAttribute="centerY" secondItem="fWZ-vY-1ev" secondAttribute="centerY" id="kvX-Vs-ReI"/>
+                                    <constraint firstItem="fWZ-vY-1ev" firstAttribute="leading" secondItem="3jA-Gh-xjT" secondAttribute="leading" constant="8" id="tlh-1b-imN"/>
+                                    <constraint firstItem="kc9-IN-lta" firstAttribute="top" secondItem="3jA-Gh-xjT" secondAttribute="top" constant="7" id="xb1-Oe-lR5"/>
+                                    <constraint firstItem="fWZ-vY-1ev" firstAttribute="top" secondItem="3jA-Gh-xjT" secondAttribute="top" constant="8" id="yLd-hL-lHO"/>
+                                </constraints>
+                            </view>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eV1-Zz-8iZ">
+                                <rect key="frame" x="0.0" y="142" width="600" height="458"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q4B-uY-nbS" customClass="GADBannerView">
+                                <rect key="frame" x="140" y="550" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="Gl0-By-Q0K"/>
+                                    <constraint firstAttribute="height" constant="50" id="t8g-ep-1EK"/>
+                                </constraints>
+                            </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="AZS-VZ-0tU">
+                                <rect key="frame" x="290" y="377" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="53Y-86-RTx">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="72"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khb-pa-FQ1" customClass="MaterialButton" customModule="PKMN_Go_Find" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="14" width="63" height="44"/>
+                                        <color key="backgroundColor" red="0.73333333329999995" green="0.58823529409999997" blue="0.0039215686269999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="63" id="BJI-d4-HXL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Moon-Light" family="Moon" pointSize="24"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="nMS-Vu-cvO" kind="unwind" unwindAction="backToFind:" id="0kR-rx-XfL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bac-Yt-KYq" customClass="MaterialButton" customModule="PKMN_Go_Find" customModuleProvider="target">
+                                        <rect key="frame" x="476" y="22" width="54" height="27"/>
+                                        <color key="backgroundColor" red="0.73333333329999995" green="0.58823529409999997" blue="0.0039215686269999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="54" id="63h-3p-QdR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Moon-Light" family="Moon" pointSize="16"/>
+                                        <state key="normal" title="Day">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goBack:" destination="9DI-Y9-cem" eventType="touchUpInside" id="a3l-RQ-lug"/>
+                                            <action selector="selectDayPoke:" destination="Ai9-wO-53S" eventType="touchUpInside" id="ygr-6J-pjd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0W-9z-uvZ" customClass="MaterialButton" customModule="PKMN_Go_Find" customModuleProvider="target">
+                                        <rect key="frame" x="538" y="22" width="54" height="27"/>
+                                        <color key="backgroundColor" red="0.73333333329999995" green="0.58823529409999997" blue="0.0039215686269999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="54" id="vCh-DI-SKU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Moon-Light" family="Moon" pointSize="16"/>
+                                        <state key="normal" title="Night">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goBack:" destination="9DI-Y9-cem" eventType="touchUpInside" id="axn-aw-J7D"/>
+                                            <action selector="selectNightPoke:" destination="Ai9-wO-53S" eventType="touchUpInside" id="pKx-Ve-kgW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ae-uS-Wyx" customClass="MaterialButton" customModule="PKMN_Go_Find" customModuleProvider="target">
+                                        <rect key="frame" x="414" y="22" width="54" height="25.5"/>
+                                        <color key="backgroundColor" red="0.73333333329999995" green="0.58823529409999997" blue="0.0039215686269999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="54" id="xuE-DS-3Uh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Moon-Light" family="Moon" pointSize="16"/>
+                                        <state key="normal" title="All">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goBack:" destination="9DI-Y9-cem" eventType="touchUpInside" id="xDT-Bh-yGy"/>
+                                            <action selector="selectAllPoke:" destination="Ai9-wO-53S" eventType="touchUpInside" id="Vzq-bT-NJ0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.80392156859999997" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="3Ml-yP-rxb"/>
+                                    <constraint firstAttribute="bottom" secondItem="Bac-Yt-KYq" secondAttribute="bottom" constant="23" id="560-2M-MeT"/>
+                                    <constraint firstItem="khb-pa-FQ1" firstAttribute="top" secondItem="53Y-86-RTx" secondAttribute="top" constant="14" id="CP9-IF-jUK"/>
+                                    <constraint firstAttribute="bottom" secondItem="9Ae-uS-Wyx" secondAttribute="bottom" constant="24.5" id="KMk-06-LD6"/>
+                                    <constraint firstItem="khb-pa-FQ1" firstAttribute="leading" secondItem="53Y-86-RTx" secondAttribute="leading" constant="8" id="LhL-bo-ttT"/>
+                                    <constraint firstItem="h0W-9z-uvZ" firstAttribute="leading" secondItem="Bac-Yt-KYq" secondAttribute="trailing" constant="8" id="M13-3B-yfk"/>
+                                    <constraint firstItem="9Ae-uS-Wyx" firstAttribute="leading" secondItem="khb-pa-FQ1" secondAttribute="trailing" constant="8" symbolic="YES" id="MQC-ln-wIQ"/>
+                                    <constraint firstItem="Bac-Yt-KYq" firstAttribute="leading" secondItem="9Ae-uS-Wyx" secondAttribute="trailing" constant="8" id="bI5-QO-Ug0"/>
+                                    <constraint firstAttribute="bottom" secondItem="khb-pa-FQ1" secondAttribute="bottom" constant="14" id="fyH-Hi-8aZ"/>
+                                    <constraint firstItem="9Ae-uS-Wyx" firstAttribute="top" secondItem="53Y-86-RTx" secondAttribute="top" constant="22" id="joh-uX-wjf"/>
+                                    <constraint firstAttribute="bottom" secondItem="h0W-9z-uvZ" secondAttribute="bottom" constant="23" id="lqW-O7-AWc"/>
+                                    <constraint firstItem="h0W-9z-uvZ" firstAttribute="top" secondItem="53Y-86-RTx" secondAttribute="top" constant="22" id="ti5-wU-ePD"/>
+                                    <constraint firstItem="Bac-Yt-KYq" firstAttribute="top" secondItem="53Y-86-RTx" secondAttribute="top" constant="22" id="vNP-7m-2HQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="h0W-9z-uvZ" secondAttribute="trailing" constant="8" id="ymV-FM-e4x"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="MQC-ln-wIQ"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8C4-ol-arz" customClass="MaterialButton" customModule="PKMN_Go_Find" customModuleProvider="target">
+                                <rect key="frame" x="20" y="478" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="JtV-5X-vyP"/>
+                                    <constraint firstAttribute="width" constant="64" id="ZWn-ff-5XN"/>
+                                </constraints>
+                                <state key="normal" image="button_navarrow"/>
+                                <connections>
+                                    <action selector="locatePokeUser:" destination="Ai9-wO-53S" eventType="touchUpInside" id="SWT-69-Fnq"/>
+                                    <action selector="tagPokemon:" destination="QGR-1G-rVc" eventType="touchUpInside" id="4Ag-hw-ItX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.10588235294117647" green="0.43137254901960786" blue="0.62352941176470589" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="53Y-86-RTx" firstAttribute="leading" secondItem="sWN-FF-AHT" secondAttribute="leading" id="31s-c8-5Lp"/>
+                            <constraint firstItem="eV1-Zz-8iZ" firstAttribute="top" secondItem="53Y-86-RTx" secondAttribute="bottom" constant="70" id="4GE-TK-kyd"/>
+                            <constraint firstItem="Q4B-uY-nbS" firstAttribute="top" secondItem="eV1-Zz-8iZ" secondAttribute="bottom" constant="-50" id="BWC-Bd-fqX"/>
+                            <constraint firstItem="Q4B-uY-nbS" firstAttribute="top" secondItem="8C4-ol-arz" secondAttribute="bottom" constant="8" id="Bye-yy-ZBS"/>
+                            <constraint firstItem="eV1-Zz-8iZ" firstAttribute="leading" secondItem="3jA-Gh-xjT" secondAttribute="leading" id="EWj-ee-Jp6"/>
+                            <constraint firstItem="53Y-86-RTx" firstAttribute="top" secondItem="sWN-FF-AHT" secondAttribute="top" id="FgG-Ev-r3O"/>
+                            <constraint firstAttribute="trailing" secondItem="53Y-86-RTx" secondAttribute="trailing" id="GtC-RC-8c6"/>
+                            <constraint firstAttribute="trailing" secondItem="3jA-Gh-xjT" secondAttribute="trailing" id="Khq-2V-sph"/>
+                            <constraint firstItem="4aw-Tl-95z" firstAttribute="top" secondItem="AZS-VZ-0tU" secondAttribute="bottom" constant="203" id="QSD-bg-JPf"/>
+                            <constraint firstItem="AZS-VZ-0tU" firstAttribute="centerX" secondItem="3jA-Gh-xjT" secondAttribute="centerX" id="amH-1D-Xjd"/>
+                            <constraint firstItem="eV1-Zz-8iZ" firstAttribute="bottom" secondItem="4aw-Tl-95z" secondAttribute="top" id="eWk-jy-lkt"/>
+                            <constraint firstItem="eV1-Zz-8iZ" firstAttribute="leading" secondItem="8C4-ol-arz" secondAttribute="trailing" constant="-84" id="ena-tB-B5X"/>
+                            <constraint firstItem="eV1-Zz-8iZ" firstAttribute="trailing" secondItem="3jA-Gh-xjT" secondAttribute="trailing" id="jJB-Xj-y8E"/>
+                            <constraint firstItem="3jA-Gh-xjT" firstAttribute="leading" secondItem="sWN-FF-AHT" secondAttribute="leading" id="mXD-fx-6Y0"/>
+                            <constraint firstItem="3jA-Gh-xjT" firstAttribute="top" secondItem="53Y-86-RTx" secondAttribute="bottom" id="xl2-0s-Zr5"/>
+                            <constraint firstItem="Q4B-uY-nbS" firstAttribute="centerX" secondItem="eV1-Zz-8iZ" secondAttribute="centerX" id="zIi-e2-0S6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="allButton" destination="9Ae-uS-Wyx" id="65L-Fg-cbw"/>
+                        <outlet property="bannerView" destination="Q4B-uY-nbS" id="q3u-UC-slE"/>
+                        <outlet property="dayButton" destination="Bac-Yt-KYq" id="qfC-FJ-ozk"/>
+                        <outlet property="leftArrowButton" destination="fWZ-vY-1ev" id="MUA-rz-wFt"/>
+                        <outlet property="nightButton" destination="h0W-9z-uvZ" id="F01-OT-Wd4"/>
+                        <outlet property="pokeImage" destination="r5p-2y-G8r" id="mLl-is-QLR"/>
+                        <outlet property="pokeLabel" destination="3jA-Gh-xjT" id="R4j-7f-5oz"/>
+                        <outlet property="pokeMap" destination="eV1-Zz-8iZ" id="DSW-1D-3Hq"/>
+                        <outlet property="pokeName" destination="kc9-IN-lta" id="pFU-vt-YOf"/>
+                        <outlet property="pokeNumber" destination="8JU-Vp-aeE" id="7de-cy-UMV"/>
+                        <outlet property="pokeSpinner" destination="AZS-VZ-0tU" id="FVR-cT-scK"/>
+                        <outlet property="pokeUserLocateButton" destination="8C4-ol-arz" id="yOX-Bp-IaP"/>
+                        <outlet property="rightArrowButton" destination="n7N-C2-5NL" id="04X-u8-eC0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a7u-J8-fGC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="nMS-Vu-cvO" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1912" y="339"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="750" height="1334"/>
+        <image name="Logo" width="451" height="276"/>
+        <image name="button_Tag" width="320" height="320"/>
+        <image name="button_find" width="320" height="320"/>
+        <image name="button_findpin" width="179" height="179"/>
+        <image name="button_navarrow" width="96" height="96"/>
+        <image name="leftarrow" width="38" height="70"/>
+        <image name="pkball" width="906" height="788"/>
+        <image name="rightarrow" width="40" height="66"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="toU-w7-LXL"/>
+        <segue reference="ak2-x0-IrY"/>
+    </inferredMetricsTieBreakers>
 </document>
